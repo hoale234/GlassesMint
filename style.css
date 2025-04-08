@@ -206,6 +206,9 @@ header .navbar a:hover {
   color: var(--green-mint);
   padding: 1rem 0;
 }
+.speciality {
+  background: linear-gradient(to left, #b3e0e3 30%, #ffffff 100%);
+}
 
 .speciality .box-container {
   display: flex;
@@ -236,6 +239,7 @@ header .navbar a:hover {
   text-align: center;
   background: #fff;
   padding: 2rem;
+  height: 300px;
 }
 
 .speciality .box-container .box .content img {
@@ -244,7 +248,7 @@ header .navbar a:hover {
 
 .speciality .box-container .box .content h3 {
   font-size: 2.5rem;
-  color: #333;
+  color: var(--orange);
 }
 
 .speciality .box-container .box .content p {
@@ -594,4 +598,8 @@ header .navbar a:hover {
   .order .row form .inputBox input {
     width: 100%;
   }
+}
+.icon-title-card-glasses {
+  width: 64px;
+  height: 64px;
 }
