@@ -40,9 +40,10 @@ section {
 
 .heading {
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 7rem;
   padding: 1rem;
   color: var(--green-mint);
+  text-transform: none;
 }
 
 .heading span {
@@ -97,8 +98,20 @@ header {
   align-items: center;
   justify-content: space-between;
   background: #fff;
-  padding: 2rem 9%;
+  padding: 0.5rem 9%;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.flex {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1rem 9% !important;
+    margin: 0px 20px !important;
+  }
 }
 
 header .logo_title {
@@ -106,19 +119,20 @@ header .logo_title {
   font-weight: bolder;
   color: var(--green-mint);
   position: relative;
+  display: flex;
 }
-header .logo {
-  font-size: 2.5rem;
+header .logo {    
   font-weight: bolder;
   color: var(--green-mint);
+  display: flex;
+  position: relative;
+  align-items: center;
 }
-
 header .logo img {
   padding-right: 0.5rem;
   color: var(--red);
   width: 60px;
   height: 60px;
-  position: absolute;
   top: -15px;
   left: -50px;
 }
@@ -201,10 +215,30 @@ header .navbar a:hover {
   text-transform: lowercase;
 }
 
+@media (max-width: 480px) {
+  .home .content h1 {
+    font-size: 6.4em;
+    color: var(--orange);
+    font-family: "Pacifico", cursive;
+    font-weight: 100;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+  .home .content h3 {
+    font-size: 5.875em;
+    color: var(--orange);
+    font-family: "Pacifico", cursive;
+    font-weight: 100;
+    font-style: normal;
+    text-transform: lowercase;
+  }
+}
+
 .home .content p {
   font-size: 1.7rem;
   color: var(--green-mint);
   padding: 1rem 0;
+  text-transform: none;
 }
 .speciality {
   background: linear-gradient(to left, #b3e0e3 30%, #ffffff 100%);
@@ -214,6 +248,34 @@ header .navbar a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .speciality .box_slider {
+    display: flex; /* Đảm bảo xếp các box theo hàng ngang */
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    gap: 1.5rem; /* Giữ khoảng cách giữa các box */
+  }
+  
+  .speciality .box_slider .box {
+    flex: 0 0 auto;
+    min-width: 80%; /* Điều chỉnh kích thước box trên mobile */
+  }
+}
+
+.box_image {
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  overflow: auto;
+}
+.box_image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
 .speciality .box-container .box {
@@ -240,21 +302,48 @@ header .navbar a:hover {
   background: #fff;
   padding: 2rem;
   height: 300px;
+  text-transform: none;
 }
 
 .speciality .box-container .box .content img {
   margin: 1.5rem 0;
 }
 
+.speciality .box-container .box .content h1 {
+  font-size: 12rem;
+  color: var(--orange);
+  height: 14rem;
+  text-transform: none;
+}
+.speciality .box-container .box .content h2 {
+  font-size: 3rem;
+  color: var(--green-mint);
+  font-weight: 800;
+  text-transform: none;
+}
+.speciality .box-container .box .content h4 {
+  font-size: 2rem;
+  color: var(--green-mint);
+  font-weight: 400;
+  text-transform: none;
+}
+.speciality .box-container .box .content span {
+  font-size: 1.5rem;
+  color: var(--green-mint);
+  text-transform: none;
+}
+
 .speciality .box-container .box .content h3 {
   font-size: 2.5rem;
   color: var(--orange);
+  text-transform: none;
 }
 
 .speciality .box-container .box .content p {
   font-size: 1.6rem;
   color: var(--green-mint);
   padding: 1rem 0;
+  text-transform: none;
 }
 
 .speciality .box-container .box:hover .image {
@@ -553,11 +642,11 @@ header .navbar a:hover {
   }
 
   header {
-    padding: 2rem;
+    padding: 4rem;
   }
 
   section {
-    padding: 2rem;
+    padding: 4rem;
   }
 }
 
